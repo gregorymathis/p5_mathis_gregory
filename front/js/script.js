@@ -6,15 +6,14 @@ fetch("http://localhost:3000/api/products")
     }
   })
   .then(function(value) {
-    console.log(value);
- for (let i = 0; i < value.length; i++) {
+    for (let i = 0; i < value.length; i++) {
     showProduct(value[i]);
 
 }
 
 })
   .catch(function(err) {
-    // Une erreur est survenue
+    // En cas d'erreur
   });
 
 function showProduct(listProduct) {
@@ -41,6 +40,4 @@ function showProduct(listProduct) {
     bloc.appendChild(img);
     bloc.appendChild(nom);
     bloc.appendChild(description);
-
-
 }
